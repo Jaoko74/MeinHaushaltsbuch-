@@ -1,1 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f3f6;
+    margin: 0;
+    padding: 15px;
+}
 
+.app {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.karte {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.konten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #1976d2;
+    color: white;
+    border: none;
+}
+
+#gesamt {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.buchung {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
