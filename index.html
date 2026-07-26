@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Mein Haushaltsbuch</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>Mein Haushaltsbuch</h1>
+
+<div class="karte">
+<h2>Gesamtvermögen</h2>
+<div id="gesamt">0,00 €</div>
+</div>
+
+
+<div class="konten">
+
+<div class="karte">
+<h3>Girokonto</h3>
+<div id="giro">0,00 €</div>
+</div>
+
+<div class="karte">
+<h3>Bargeld</h3>
+<div id="bar">0,00 €</div>
+</div>
+
+<div class="karte">
+<h3>Sparen</h3>
+<div id="sparen">0,00 €</div>
+</div>
+
+</div>
+
+
+<div class="karte">
+
+<h2>Neue Buchung</h2>
+
+<input id="beschreibung" placeholder="Beschreibung">
+
+<input id="betrag" type="number" placeholder="Betrag">
+
+<select id="art">
+<option value="ausgabe">Ausgabe</option>
+<option value="einnahme">Einnahme</option>
+</select>
+
+
+<select id="konto">
+<option>Girokonto</option>
+<option>Bargeld</option>
+<option>Sparen</option>
+</select>
+
+
+<button onclick="speichern()">
+Speichern
+</button>
+
+</div>
+
+
+<div class="karte">
+
+<h2>Buchungen</h2>
+
+<div id="liste"></div>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
