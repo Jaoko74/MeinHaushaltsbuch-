@@ -6,7 +6,8 @@ function speichern(){
     let betrag = Number(document.getElementById("betrag").value);
     let art = document.getElementById("art").value;
     let konto = document.getElementById("konto").value;
-
+    let datum = document.getElementById("datum").value;
+    
     if(!beschreibung || !betrag){
         alert("Bitte Daten eingeben");
         return;
@@ -17,7 +18,7 @@ function speichern(){
         betrag: betrag,
         art: art,
         konto: konto,
-        datum: new Date().toLocaleDateString("de-DE")
+        datum: datum
     });
 
     localStorage.setItem(
