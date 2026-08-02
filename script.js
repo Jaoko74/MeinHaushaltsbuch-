@@ -70,7 +70,8 @@ ${b.beschreibung}
 
 ${b.betrag.toFixed(2)} €
 
-</div>`;});
+</div>`;
+    });
     
 
 
