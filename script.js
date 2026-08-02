@@ -67,8 +67,7 @@ function anzeigen(){
   month: "2-digit",
   year: "numeric"
 }) : ""}
-        </div>`;
-    });
+    
 
 
     document.getElementById("giro").innerHTML =
