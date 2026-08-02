@@ -62,7 +62,7 @@ function anzeigen(){
         <b>${b.beschreibung}</b><br>
         ${b.betrag.toFixed(2)} € 
         <br>
-        ${b.datum ? new Date(b.datum).toLocaleDateString("de-DE") : ""}
+        new Date(b.datum).toLocaleDateString("de-DE")
         </div>`;
     });
 
