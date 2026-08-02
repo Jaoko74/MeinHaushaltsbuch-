@@ -7,7 +7,7 @@ function speichern(){
     let art = document.getElementById("art").value;
     let konto = document.getElementById("konto").value;
     let datum = document.getElementById("datum").value;
-    
+
     if(!beschreibung || !betrag){
         alert("Bitte Daten eingeben");
         return;
@@ -62,7 +62,7 @@ function anzeigen(){
         <b>${b.beschreibung}</b><br>
         ${b.betrag.toFixed(2)} € 
         <br>
-        ${b.datum || ""}
+        ${b.datum ? new Date(b.datum).toLocaleDateString("de-DE") : ""}
         </div>`;
     });
 
