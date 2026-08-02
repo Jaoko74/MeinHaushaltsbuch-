@@ -58,11 +58,19 @@ function anzeigen(){
 
 
         liste.innerHTML += `
-        <div class="buchung">
-        <b>${b.beschreibung}</b><br>
-        ${b.betrag.toFixed(2)} € 
-        <br>
-        new Date(b.datum).toLocaleDateString("de-DE")
+<div class="buchung">
+
+<b>${b.datum ? new Date(b.datum).toLocaleDateString("de-DE") : ""}</b>
+
+<br>
+
+${b.beschreibung}
+
+<br>
+
+${b.betrag.toFixed(2)} €
+
+</div>`;
     
 
 
