@@ -85,5 +85,7 @@ function anzeigen(){
     ).toFixed(2)+" €";
 }
 
+document.getElementById("datum").value =
+new Date().toISOString().split("T")[0];
 
 anzeigen();
