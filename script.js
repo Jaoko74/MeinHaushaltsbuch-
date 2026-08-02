@@ -61,7 +61,11 @@ function anzeigen(){
         liste.innerHTML += `
         <div class="buchung">
 
-        <b>${b.datum ? new Date(b.datum).toLocaleDateString("de-DE") : ""}</b>
+        <b>${b.datum ? new Date(b.datum).toLocaleDateString("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+}) : ""}</b>
 
         <br>
 
