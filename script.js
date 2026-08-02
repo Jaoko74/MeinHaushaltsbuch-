@@ -61,6 +61,8 @@ function anzeigen(){
         <div class="buchung">
         <b>${b.beschreibung}</b><br>
         ${b.betrag.toFixed(2)} € 
+        <br>
+        ${b.datum || ""}
         </div>`;
     });
 
