@@ -33,6 +33,7 @@ function speichern(){
 }
 
 
+
 function anzeigen(){
 
     let konten = {
@@ -58,21 +59,20 @@ function anzeigen(){
 
 
         liste.innerHTML += `
-<div class="buchung">
+        <div class="buchung">
 
-<b>${b.datum ? new Date(b.datum).toLocaleDateString("de-DE") : ""}</b>
+        <b>${b.datum ? new Date(b.datum).toLocaleDateString("de-DE") : ""}</b>
 
-<br>
+        <br>
 
-${b.beschreibung}
+        ${b.beschreibung}
 
-<br>
+        <br>
 
-${b.betrag.toFixed(2)} €
+        ${b.betrag.toFixed(2)} €
 
-</div>`;
+        </div>`;
     });
-    
 
 
     document.getElementById("giro").innerHTML =
@@ -92,6 +92,7 @@ ${b.betrag.toFixed(2)} €
         konten.Sparen
     ).toFixed(2)+" €";
 }
+    
 
 document.getElementById("datum").value =
 new Date().toISOString().split("T")[0];
