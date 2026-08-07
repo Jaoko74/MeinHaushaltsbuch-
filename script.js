@@ -36,28 +36,27 @@ function speichern(){
 }
 
 
-
 function anzeigen(){
 
     let konten = {
-        Girokonto:0,
-        Bargeld:0,
-        Sparen:0
+        Girokonto: 0,
+        Bargeld: 0,
+        Sparen: 0
     };
 
     let liste = document.getElementById("liste");
 
     if(!liste) return;
 
-    liste.innerHTML="";
+    liste.innerHTML = "";
 
 
     buchungen.forEach(function(b){
 
         if(b.art === "einnahme"){
-            konten[b.konto] += b.betrag;
+            konten[b.konto] += Number(b.betrag);
         } else {
-            konten[b.konto] -= b.betrag;
+            konten[b.konto] -= Number(b.betrag);
         }
 
 
@@ -65,50 +64,51 @@ function anzeigen(){
         <div class="buchung">
 
         <b>${b.datum ? new Date(b.datum).toLocaleDateString("de-DE", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric"
-}) : ""}</b>
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+        }) : ""}</b>
 
         <br>
 
         ${b.beschreibung}
 
         <br>
-        
+
         ${b.haendler || ""}
-        
-    
+
         <br>
 
-        <span class="${b.art === 'einnahme' ? 'einnahme' : 'ausgabe'}">
-${b.art === 'einnahme' ? '+' : '-'}${b.betrag.toFixed(2)} €
-</span>
+        <span class="${b.art === "einnahme" ? "einnahme" : "ausgabe"}">
+        ${b.art === "einnahme" ? "+" : "-"}${Number(b.betrag).toFixed(2)} €
+        </span>
 
         </div>`;
     });
 
 
     document.getElementById("giro").innerHTML =
-    konten.Girokonto.toFixed(2)+" €";
+        konten.Girokonto.toFixed(2) + " €";
 
     document.getElementById("bar").innerHTML =
-    konten.Bargeld.toFixed(2)+" €";
+        konten.Bargeld.toFixed(2) + " €";
 
     document.getElementById("sparen").innerHTML =
-    konten.Sparen.toFixed(2)+" €";
+        konten.Sparen.toFixed(2) + " €";
 
 
     document.getElementById("gesamt").innerHTML =
-    (
-        konten.Girokonto +
-        konten.Bargeld +
-        konten.Sparen
-    ).toFixed(2)+" €";
+        (
+            konten.Girokonto +
+            konten.Bargeld +
+            konten.Sparen
+        ).toFixed(2) + " €";
 }
-    
+
+
+/* Datum automatisch auf heute setzen */
 
 document.getElementById("datum").value =
-new Date().toISOString().split("T")[0];
+    new Date().toISOString().split("T")[0];
 
 anzeigen();
