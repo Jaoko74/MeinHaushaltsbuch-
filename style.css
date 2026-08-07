@@ -52,3 +52,12 @@ button {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+.einnahme {
+    color: green;
+    font-weight: bold;
+}
+
+.ausgabe {
+    color: red;
+    font-weight: bold;
+}
