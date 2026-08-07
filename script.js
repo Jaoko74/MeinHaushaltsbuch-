@@ -73,7 +73,9 @@ function anzeigen(){
 
         <br>
 
-        ${b.betrag.toFixed(2)} €
+        <span class="${b.art === 'einnahme' ? 'einnahme' : 'ausgabe'}">
+${b.art === 'einnahme' ? '+' : '-'}${b.betrag.toFixed(2)} €
+</span>
 
         </div>`;
     });
