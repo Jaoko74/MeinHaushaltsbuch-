@@ -74,6 +74,10 @@ function anzeigen(){
         ${b.beschreibung}
 
         <br>
+        
+        ${b.haendler || ""}
+        
+        <br>
 
         <span class="${b.art === 'einnahme' ? 'einnahme' : 'ausgabe'}">
 ${b.art === 'einnahme' ? '+' : '-'}${b.betrag.toFixed(2)} €
