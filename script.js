@@ -8,7 +8,7 @@ function speichern(){
     let konto = document.getElementById("konto").value;
     let datum = document.getElementById("datum").value;
     let haendler = document.getElementById("haendler").value;
-    
+
     if(!beschreibung || !betrag){
         alert("Bitte Daten eingeben");
         return;
@@ -19,8 +19,8 @@ function speichern(){
         betrag: betrag,
         art: art,
         konto: konto,
-        datum: datum
-            haendler: haendler
+        datum: datum,
+        haendler: haendler
     });
 
     localStorage.setItem(
@@ -28,10 +28,11 @@ function speichern(){
         JSON.stringify(buchungen)
     );
 
-    anzeigen();
+    document.getElementById("beschreibung").value = "";
+    document.getElementById("betrag").value = "";
+    document.getElementById("haendler").value = "";
 
-    document.getElementById("beschreibung").value="";
-    document.getElementById("betrag").value="";
+    anzeigen();
 }
 
 
